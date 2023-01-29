@@ -7,10 +7,6 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public int create(UserCreateReq req) {
-        if (req.getAge() != null) {
-            throw new RuntimeException("나이는 필수입니다.");
-        }
-
         if (req.getAge() <= 10) {
             throw new RuntimeException("10세 이하는 가입이 불가합니다.");
         }

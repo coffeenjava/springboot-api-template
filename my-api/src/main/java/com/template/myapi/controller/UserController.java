@@ -17,7 +17,6 @@ public class UserController {
 
     @PostMapping
     public int create(@RequestBody UserCreateReq req) {
-        if (req.getEmail() == null) throw new RuntimeException("email 은 필수입니다.");
         return userService.create(req);
     }
 }
